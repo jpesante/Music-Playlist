@@ -29,6 +29,7 @@ public class Main {
     // albums are stored in an ArrayList & playList is stored in a LinkedList.
 
     LinkedList<Song> playList = new LinkedList<Song>();
+    // LikedList object of the Song class called playList
     albums.get(0).addToPlayList("Bad", playList);
     albums.get(0).addToPlayList("Edge",playList);
     albums.get(1).addToPlayList("It's",playList);
@@ -36,6 +37,7 @@ public class Main {
     //albums.get(2).addToPlayList("test element 1",playList); // nothing added, no new album is at element 2.
 
     albums.get(1).addToPlayList("Freak",playList);
+    albums.get(1).addToPlayList("Got",playList);
     //albums.get(1).addToPlayList(2,playList);
 
     play(playList);

@@ -13,8 +13,10 @@ public class Album {
     public Album(String albumName, String artistName) {
         this.albumName = albumName;
         this.artistName = artistName;
+        // add songList ArrayList to the constructor
         this.songList = new ArrayList<Song>();
     }
+
 
     public boolean addSong(String songTitle, double songDuration) {
         // be sure not to duplicate song
@@ -27,8 +29,11 @@ public class Album {
 
     private Song findSong (String songTitle) {
         // shortcut instead of iterating through i.  ie. for (int i = 0, i<songList.size(); i++) {}
+        // looks similar to a foreach loop
         for (Song checkedSong : this.songList) {
-            if (checkedSong.getSongTitle().startsWith(songTitle)) {
+            // created an object of the Song class called checkedSong, like a constructor, pointing to thos.songLIst which is the name
+            // of the ArrayList object of the Song class
+            if (checkedSong.getSongTitle().startsWith(songTitle)) { // was .equals but I like the efficiency of .startsWith or .contains so you don't have to spell exactly the same.
                 return checkedSong;
             }
         }
